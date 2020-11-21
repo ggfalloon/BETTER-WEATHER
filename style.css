@@ -9,6 +9,11 @@ body {
     border-radius: 15px;
     margin-top: 10px;
 }
+#searchBtn {
+    background-color: skyblue;
+    border-radius: 5px;
+    border: 2px solid black;
+}
 #header {
     text-align: center;
     padding: 20px;
@@ -20,6 +25,7 @@ body {
     max-width: 700px;
     margin: auto;
     border-radius: 35px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 #weather {
     float: left;
@@ -27,6 +33,7 @@ body {
     min-width: 500px;
     min-height: 500px;
     max-height: 750px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 #odds {
     float: right;
@@ -34,6 +41,7 @@ body {
     min-width: 500px;
     min-height: 750px;
     margin-top: 20px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 #title {
     text-align: center;
@@ -43,11 +51,12 @@ body {
     color: white;
     border-radius: 15px;
     padding: 2px;
-    
+    font-family: 'Chakra Petch', sans-serif;
 }
 #stadium {
     min-width: 500px;
     min-height: 500px;
     max-height: 750px;
     margin-top: 20px;
+    font-family: 'Chakra Petch', sans-serif;
 }

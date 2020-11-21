@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
@@ -19,19 +20,21 @@
             </h2>
         </div>   
     </div>
-    <div id="searchInput">
-        <div class="mt-1 relative rounded-md shadow-sm">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <div id="searchInput">
+            <div class="mt-1 relative grid-cols-3 gap-4 rounded-md shadow-sm">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                </div>
+                <div><button id="searchBtn"><i class="fa fa-search"></i></button></div>
+                <input type="text" id="price" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-8 sm:text-sm border-black-300 rounded-md"> 
+            </div>
         </div>
-        <input type="text" id="price" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md">
-        </div>
-    </div>
+    <div><button><i class="fa fa-search"></i></button></div>
     <div class="py-12 bg-white" id="header2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Scores</h1>
+                <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">LIVE-ODDS</h1>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Live Stats Of Your Game
+                Live Odds Of Your Game
                 </p>
             </div>
         </div>
@@ -96,42 +99,50 @@
         <dl>
             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">
-                Day 1
+                Stadium
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="stadiumEl">
                 
             </dd>
             </div>
             <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">
-                Day 2
+                Turf
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="turfEl">
                 
             </dd>
             </div>
             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">
-                Day 3
+                Capacity
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" capacityEl>
                 
             </dd>
             </div>
             <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">
-                Day 4
+                Location
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="locationEl">
                 
             </dd>
             </div>
             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">
-                Day 5
+                Surface
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="surfaceEl">
                 
+            </dd>
+            </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt class="text-sm font-medium text-gray-500">
+                Roof type
+            </dt>
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="roofEl">
+                    
             </dd>
             </div>
         </dl>
@@ -144,7 +155,7 @@
             <dt class="text-sm font-medium text-gray-500">
                 Day 1
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="oddsTeams">
                 
             </dd>
             </div>
@@ -152,7 +163,7 @@
             <dt class="text-sm font-medium text-gray-500">
                 Day 2
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="site1">
                 
             </dd>
             </div>
@@ -160,7 +171,7 @@
             <dt class="text-sm font-medium text-gray-500">
                 Day 3
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="site2">
                 
             </dd>
             </div>
@@ -168,7 +179,7 @@
             <dt class="text-sm font-medium text-gray-500">
                 Day 4
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="site3">
                 
             </dd>
             </div>
@@ -176,7 +187,7 @@
             <dt class="text-sm font-medium text-gray-500">
                 Day 5
             </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="bettingOdds">
                 
             </dd>
             </div>
