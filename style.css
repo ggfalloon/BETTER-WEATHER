@@ -1,0 +1,62 @@
+body {
+    background-image: url(https://wallpaperaccess.com/full/733839.jpg);
+}
+#searchInput {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 500px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#searchBtn {
+    background-color: skyblue;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#header {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 35px;
+    background-image: url(https://www.seekpng.com/png/small/52-527367_stick-man-clipart-black-and-white-olympic-sports.png);
+}
+#header2 {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 35px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#weather {
+    float: left;
+    margin-top: 20px;
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 750px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#odds {
+    float: right;
+    margin-top: auto;
+    min-width: 500px;
+    min-height: 750px;
+    margin-top: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#title {
+    text-align: center;
+    background-color: black;
+    max-width: 250px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 15px;
+    padding: 2px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#stadium {
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 750px;
+    margin-top: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+}
