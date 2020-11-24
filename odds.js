@@ -28,13 +28,13 @@ $(document).ready(function () {
                     dayList += "<hr>";
                     dayList += "<br>";
                     dayList += "<ul>";
-                    dayList += "<li >Date: " + response.list[i].dt_txt.split(" ")[0] + "</li>";
+                    dayList += "<li >Date: " + moment(response.list[i].dt_txt.split(" ")[0], "YYYY-MM-DD").format("MM-DD-YYYY") + "</li>";
                     dayList += "<li>" + "<img src='https://openweathermap.org/img/w/" + response.list[i].weather[0].icon + ".png'>" + "</li>";
-                    dayList += "<li>Temp: " + response.list[i].main.temp + "</li>";
-                    dayList += "<li>Humidity: " + response.list[i].main.humidity + "</li>";
-                    dayList += "<li>Wind Speed: " + response.list[i].wind.speed + "</li>";
-                    dayList += "<li> Visibility: " + response.list[i].visibility + "</li>";
-                    dayList += "<li>Chance of Rain: " + response.list[i].pop + "</li>";
+                    dayList += "<li>Temp: " + Math.trunc(response.list[i].main.temp) + "\u00B0</li>";
+                    dayList += "<li>Humidity: " + response.list[i].main.humidity + "%</li>";
+                    dayList += "<li>Wind Speed: " + response.list[i].wind.speed + "mph</li>";
+                    dayList += "<li> Visibility: " + response.list[i].visibility + "m</li>";
+                    dayList += "<li>Precipitation: " + response.list[i].pop + "\"\</li>";
                     dayList += "</ul>";
                     dayList += "<br>";
                 }
@@ -66,24 +66,36 @@ $(document).ready(function () {
                     return $1 === '120px' ? '1200px' : '120px';
                 });
 
-                var stadiumObj = {
-                    img: imgSrc,
-                    name: tdArray[1].outerText,
-                    capacity: tdArray[2].outerText,
-                    location: tdArray[3].outerText,
-                    surface: tdArray[4].outerText,
-                    roofType: tdArray[5].outerText,
-                    team: tdArray[6].outerText
+                if (cityName == tdArray[3].outerText.split(",")[0]) {
+
+                    // $("imageEl").html()
+                    $("#stadiumEl").html(tdArray[1].outerText);
+                    $("#teamEl").html(tdArray[6].outerText);
+                    $("#roofEl").html(tdArray[5].outerText);
+                    $("#turfEl").html(tdArray[4].outerText);
+                    $("#capacityEl").html(tdArray[2].outerText);
+                    $("#locationEl").html(tdArray[3].outerText);
+
+                    var stadiumObj = {
+                        img: imgSrc,
+                        name: tdArray[1].outerText,
+                        capacity: tdArray[2].outerText,
+                        location: tdArray[3].outerText,
+                        surface: tdArray[4].outerText,
+                        roofType: tdArray[5].outerText,
+                        team: tdArray[6].outerText
+                    }
+                    stadiumArray.push(stadiumObj)
+
                 }
-                stadiumArray.push(stadiumObj)
+
             });
 
-            // if (cityName == location.tdArray[3].outerText.split(",")) {
 
 
-            // }
-            console.log(stadiumArray);
-            $("#wikipage").html(wikiTable)
+
+            // console.log(stadiumArray);
+            // $("#wikipage").html(wikiTable)
         });
 
 
