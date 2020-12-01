@@ -3,9 +3,9 @@ body {
 }
 #searchInput {
     font-family: 'Chakra Petch', sans-serif;
-    margin: 0 auto;
+    margin: auto;
     margin-bottom: 10px;
-    max-width: 500px;
+    max-width: 750px;
     border-radius: 15px;
     margin-top: 10px;
 }
@@ -13,6 +13,7 @@ body {
     background-color: skyblue;
     border-radius: 5px;
     border: 2px solid black;
+    margin-left: auto;
 }
 #header {
     text-align: center;
@@ -30,16 +31,16 @@ body {
 #weather {
     float: left;
     margin-top: 20px;
-    min-width: 500px;
+    min-width: 350px;
     min-height: 500px;
-    max-height: 750px;
+    max-height: 500px;
     font-family: 'Chakra Petch', sans-serif;
 }
 #odds {
     float: right;
     margin-top: auto;
-    min-width: 500px;
-    min-height: 750px;
+    min-width: 350px;
+    min-height: 500px;
     margin-top: 20px;
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -54,9 +55,33 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 #stadium {
-    min-width: 500px;
+    min-width: 350px;
     min-height: 500px;
-    max-height: 750px;
+    max-height: 500px;
     margin-top: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#header3 {
+    text-align: center;
+    margin-top: 25px;
+    max-width: 700px;
+    max-height: 75px;
+    border-radius: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#header4 {
+    text-align: center;
+    margin-top: 25px;
+    max-width: 700px;
+    max-height: 75px;
+    border-radius: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#header5 {
+    text-align: center;
+    margin-top: 25px;
+    max-width: 700px;
+    max-height: 75px;
+    border-radius: 15px;
     font-family: 'Chakra Petch', sans-serif;
 }
