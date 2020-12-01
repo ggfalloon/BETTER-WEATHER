@@ -91,19 +91,11 @@ $(document).ready(function () {
 
             });
 
-
-
-
             // console.log(stadiumArray);
             // $("#wikipage").html(wikiTable)
         });
 
-
-
-
     });
 
-
-    // });
 });
 
