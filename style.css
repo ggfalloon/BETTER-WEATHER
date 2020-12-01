@@ -1,19 +1,22 @@
 body {
     background-image: url(https://wallpaperaccess.com/full/733839.jpg);
 }
-#searchInput {
+
+/* #searchInput {
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 auto;
     margin-bottom: 10px;
     max-width: 500px;
     border-radius: 15px;
     margin-top: 10px;
-}
-#searchBtn {
+} */
+
+/* #searchBtn {
     background-color: skyblue;
     border-radius: 5px;
     border: 2px solid black;
-}
+} */
+
 #header {
     text-align: center;
     padding: 20px;
@@ -21,14 +24,18 @@ body {
     border-radius: 35px;
     background-image: url(https://www.seekpng.com/png/small/52-527367_stick-man-clipart-black-and-white-olympic-sports.png);
 }
-#header2 {
+
+/* #header2 {
     max-width: 700px;
     margin: auto;
     border-radius: 35px;
     font-family: 'Chakra Petch', sans-serif;
-}
+} */
+
 #weather {
-    float: left;
+    text-align: center;
+    align-items: center;
+    /* float: left; */
     margin-top: 20px;
     min-width: 500px;
     min-height: 500px;
@@ -36,7 +43,8 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 #odds {
-    float: right;
+    text-align: center;
+    /* float: right; */
     margin-top: auto;
     min-width: 500px;
     min-height: 750px;
