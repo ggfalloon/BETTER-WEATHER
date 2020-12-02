@@ -8,8 +8,8 @@ $(document).ready(function () {
 
         var dataArr = oddsResponse.data;
         for (i = 0; i < dataArr.length; i++) {
-
-            var allTeams = dataArr[i].teams[0];
+            // Changed to pull only home Teams
+            var allTeams = dataArr[i].home_team;
             $("#data").append(allTeams + " <br> ");
 
         }
@@ -26,7 +26,11 @@ $(document).ready(function () {
                 url: queryURL,
                 method: "GET"
             }).then(function (response) {
-                console.log(response)
+                // Added City name to weather
+                var weatherCity = response.city.name;
+                for (i = 0; i < response.city.name.length; i++) {
+                    $("#weatherCity").html(weatherCity);
+                }
 
                 var dayList = " ";
 
