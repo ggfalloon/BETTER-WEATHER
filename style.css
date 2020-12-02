@@ -32,39 +32,33 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 } */
 
-#weather {
-    text-align: center;
-    align-items: center;
-    /* float: left; */
+.columnData {
+    text-align: centerß;
     margin-top: 20px;
     min-width: 500px;
     min-height: 500px;
     max-height: 750px;
     font-family: 'Chakra Petch', sans-serif;
 }
-#odds {
-    text-align: center;
-    /* float: right; */
-    margin-top: auto;
-    min-width: 500px;
-    min-height: 750px;
+
+#weather, #wikipage, #game {
+    align-items: center;
+    padding: 2em;
     margin-top: 20px;
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 750px;
     font-family: 'Chakra Petch', sans-serif;
 }
+
+
 #title {
-    text-align: center;
+    /* text-align: center; */
     background-color: black;
     max-width: 250px;
     margin: 0 auto;
     color: white;
     border-radius: 15px;
     padding: 2px;
-    font-family: 'Chakra Petch', sans-serif;
-}
-#stadium {
-    min-width: 500px;
-    min-height: 500px;
-    max-height: 750px;
-    margin-top: 20px;
     font-family: 'Chakra Petch', sans-serif;
 }
