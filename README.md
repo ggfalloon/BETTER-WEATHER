@@ -1,4 +1,4 @@
-### BETTER-WEATHER
+# BETTER-WEATHER
 
 ## Usage
 
