@@ -28,11 +28,12 @@ body {
 #header2 {
 color: white;
 margin-top: 20px;
-background-image: url(assets/football\ banner.jpg);
+background-image: url(Assets/footballbanner.jpg);
 background-size: cover;
 font-family: 'Chakra Petch', sans-serif;
 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
 
 .columnData {
     text-align: centerß;

@@ -8,12 +8,13 @@ $(document).ready(function () {
         console.log(oddsResponse)
         // Pulls all upcoming home teams and display them on the page
         var dataArr = oddsResponse.data;
-        for (i = 0; i < dataArr.length; i++) {
+        for (i = 0; i < 10; i++) {
             // Changed to pull only home Teams
+
             var allTeams = dataArr[i].home_team;
             $("#data").append(allTeams + " <br> ");
-
         }
+
         // Added click function for search input
         $("#searchBtn").click(function () {
             var cityTeam = $("#teamName").val();
@@ -32,6 +33,7 @@ $(document).ready(function () {
                 pageHolder = $("<div>").html(wikipage)
                 var wikiTable = pageHolder.find("table.wikitable.sortable")[0];
                 var tableRows = $(wikiTable).find("tr:not(tr:first-child)")
+
                 // Loop through the table data and write dynamically to the page
                 $.each(tableRows, function (index, stadiumTR) {
                     var tdArray = $(stadiumTR).find("td, th");
