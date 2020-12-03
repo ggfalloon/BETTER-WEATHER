@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -8,152 +10,165 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>LIVE-ODDS</title>
+    <title>BETTER-WEATHER</title>
 </head>
+
 <body>
+    <!--Header-->
     <div class="lg:flex lg:items-center lg:justify-between" id="header">
         <div class="flex-1 min-w-0">
             <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate" id="title">
-                LIVE-ODDS
-            </h2>
-        </div>   
+                BETTER-WEATHER
+            </h2> 
+        </div>
     </div>
-    <div class="grid grid-cols-2">
-        <div id="searchInput">
-            <div class="mt-1 relative grid-cols-3 gap-4 rounded-md shadow-sm">
-                <input type="text" id="price" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-20 lg:text-lg border-black-300 rounded-md" placeholder=" Insert NFL Team"> 
+    <div class="py-12 bg-white" id="header2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    UPCOMING HOME GAMES
+                </p>
+                <div id="data"></div>
+                <span class="relative inset-y-0 left-0 flex items-center pl-2">
+                    <input type="search" id="teamName" name="q"
+                        class="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
+                        placeholder="Enter Stadium City" autocomplete="off">
+                    <button type="submit" id="searchBtn" class="p-1 focus:outline-black focus:shadow-outline">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </span>
             </div>
         </div>
-        <div class="mt-1 relative rounded-md shadow-sm">
-            <button id="searchBtn"><i class="fa fa-search"></i></button class="mt-10">
-            </div>
-        </div>
-        <div class="py-12 bg-white" id="header2">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="lg:text-center">
-                    <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">LIVE-ODDS</h1>
-                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        Live Odds Of Your Game
-                        <div class="bg-white shadow overflow-hidden sm:rounded-lg" id="odds">
-                          <div class="border-t border-gray-200">
-                          <dl>
-                              <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                              <dt class="text-sm font-medium text-gray-500">
-                                 Live Game :
-                              </dt>
-                              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="oddsTeams">
-                                  
-                              </dd>
-                              </div>
-                              <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                              <dt class="text-sm font-medium text-gray-500">
-                                  Home Team :
-                              </dt>
-                              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="site1">
-                                  
-                              </dd>
-                              </div>
-                              <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                              <dt class="text-sm font-medium text-gray-500">
-                                  Betting Websites and Odds :
-                              </dt>
-                              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="site2">
-                                  
-                              </dd>
-                              </div>
-                          </dl>
-                          </div>
-                        </div>
-                    </p>
+    </div>
+    <!--Weather Content-->
+    <div class="grid grid-cols-3 gap-4 ">
+        <div id="weatherCss">
+            <div class="bg-white shadow sm:rounded-lg columnData overflow-y-auto">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+                    WEATHER INFO
+                </p>
+                <h1>City: <span id="weatherCity"></span></h1>
+                <div class="border-t border-gray-200 items-center" id="weather"> 
                 </div>
             </div>
         </div>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="py-12 bg-white" id="header3">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Weather</h1>
+        <!--Stadium Content-->
+        <div id="stadiumCss">
+            <div class="bg-white shadow overflow-auto sm:rounded-lg columnData">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+                    STADIUM INFO
+                </p>
+                <div class="border-t border-gray-200 text-left" id="wikipage">
+
+                    <dl>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Stadium:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="stadiumEl">
+                            </dd>
+                        </div>
+
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Team:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="teamEl">
+                            </dd>
+                        </div>
+
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Roof Type:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="roofEl">
+
+                            </dd>
+                        </div>
+
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Turf:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="turfEl">
+
+                            </dd>
+                        </div>
+
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Capacity:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="capacityEl">
+
+                            </dd>
+                        </div>
+
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Location:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="locationEl">
+
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="py-12 bg-white" id="header4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Staduim Information</h1>
+        <!--Odds Content-->
+        <div id="oddsCss">
+            <div class="bg-white shadow overflow-hidden sm:rounded-lg columnData">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+                    ODDS INFO
+                </p>
+                <div class="border-t border-gray-200" id="game">
+
+                    <dl>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Home Team:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="hometeam">
+                            </dd>
+                        </div>
+
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Game:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="gameteams">
+                            </dd>
+                        </div>
+
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Game Date/Time:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="gametime">
+                            </dd>
+                        </div>
+
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500 text-right">
+                                Odds Sites:
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="websites">
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </div>
-      </div>
     </div>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="bg-white shadow overflow-hidden sm:rounded-lg" id="weather">
-        <div class="border-t border-gray-200">
-          <dl>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">
-                Date
-              </dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherDate">
-                
-              </dd>
-            </div>
-            
-          </dl>
-        </div>
-      </div>
-      <div class="bg-white shadow overflow-hidden sm:rounded-lg" id="stadium">
-        <div class="border-t border-gray-200">
-        <dl>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Stadium
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="stadiumEl">
-                
-            </dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Turf
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="turfEl">
-                
-            </dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Capacity
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="capacityEl">
-                
-            </dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Location
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="locationEl">
-                
-            </dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Surface
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="surfaceEl">
-                
-            </dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">
-                Roof type
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="roofEl">
-                    
-            </dd>
-            </div>
-        </dl>
-        </div>
-      </div>
-    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="script.js"></script>
+
 </body>
+
 </html>
