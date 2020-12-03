@@ -3,9 +3,6 @@ body {
 }
 #searchBtn {
     background-color: black;
-    border-radius: 5px;
-    border: 2px solid black;
-}
 #header {
     text-align: center;
     padding: 20px;
@@ -57,6 +54,8 @@ body {
     max-height: 750px;
     font-family: 'Chakra Petch', sans-serif;
 }
+
+
 #title {
     text-align: center; 
     background-color: black;
