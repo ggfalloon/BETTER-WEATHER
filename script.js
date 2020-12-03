@@ -8,18 +8,21 @@ $(document).ready(function () {
         console.log(oddsResponse)
         // Pulls all upcoming home teams and display them on the page
         var dataArr = oddsResponse.data;
-        for (i = 0; i < dataArr.length; i++) {
+        for (i = 0; i < 10; i++) {
             // Changed to pull only home Teams
+
             var allTeams = dataArr[i].home_team;
             $("#data").append(allTeams + " <br> ");
         }
-      
+
+
         // Added click function for search input
         $("#searchBtn").click(function () {
             var cityTeam = $("#teamName").val();
 
             var queryURL = "https://en.wikipedia.org/w/api.php?action=parse&pageid=10814816&prop=text&format=json";
             var pageHolder = "";
+
             // Ajax request for wikipedia stadium table
             $.ajax({
                 url: queryURL,
@@ -27,11 +30,13 @@ $(document).ready(function () {
                 crossDomain: true,
                 dataType: 'jsonp',
             }).then(function (response) {
+
                 // Parses the table to an object array
                 var wikipage = response.parse.text["*"]
                 pageHolder = $("<div>").html(wikipage)
                 var wikiTable = pageHolder.find("table.wikitable.sortable")[0];
                 var tableRows = $(wikiTable).find("tr:not(tr:first-child)")
+
                 // Loop through the table data and write dynamically to the page
                 $.each(tableRows, function (index, stadiumTR) {
                     var tdArray = $(stadiumTR).find("td, th");
@@ -42,7 +47,6 @@ $(document).ready(function () {
 
                     if (cityTeam == tdArray[3].outerText.split(",")[0]) {
 
-                        // $("#imageEl").html(imgSrc);
                         $("#stadiumEl").html(tdArray[1].outerText);
                         $("#teamEl").html(tdArray[6].outerText);
                         $("#roofEl").html(tdArray[5].outerText);
@@ -57,13 +61,14 @@ $(document).ready(function () {
 
             var cityName = $("#teamName").val();
             var appID = "21292f97c006ec7feb138c594d793fed";
-            var queryURL = "https://api.openweathermap.org/data/2.5/forecast/?q=" + cityName + "&units=imperial&appid=" + appID;
+            var qURL = "https://api.openweathermap.org/data/2.5/forecast/?q=" + cityName + "&units=imperial&appid=" + appID;
 
             // Ajax request for current searched city weather info
             $.ajax({
-                url: queryURL,
+                url: qURL,
                 method: "GET"
             }).then(function (response) {
+
                 // Added City name to weather section
                 var weatherCity = response.city.name;
                 for (i = 0; i < response.city.name.length; i++) {
@@ -72,7 +77,7 @@ $(document).ready(function () {
                 var dayList = " ";
 
                 for (i = 0; i < response.list.length; i++) {
-                    // Removes time from date feature
+                    // Retrieves only the 3:00 forecast 
                     if (response.list[i].dt_txt.split(" ")[1] === "18:00:00") {
                         // dynamically displays weather data
                         dayList += "<br>";
