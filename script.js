@@ -12,8 +12,8 @@ $(document).ready(function () {
             // Changed to pull only home Teams
             var allTeams = dataArr[i].home_team;
             $("#data").append(allTeams + " <br> ");
-
         }
+      
         // Added click function for search input
         $("#searchBtn").click(function () {
             var cityTeam = $("#teamName").val();
@@ -118,7 +118,6 @@ $(document).ready(function () {
                         $("#websites").append(sites[i].site_nice + " : " + odd + "<br>");
 
                     }
-
                 }
             }
             // Clears appended html upon new search
