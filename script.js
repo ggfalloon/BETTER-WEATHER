@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "https://api.the-odds-api.com/v3/odds/?apiKey=9affd49948bc48e9c0515a0456515a2f&sport=americanfootball_nfl&region=uk&mkt=h2h",
+
+        url: "https://api.the-odds-api.com/v3/odds/?apiKey=a2fcf2e355a2d98481fc8e5cf46d6a39&sport=americanfootball_nfl&region=uk&mkt=h2h",
+
         method: "GET"
     }).then(function (oddsResponse) {
         console.log(oddsResponse)
@@ -89,7 +91,9 @@ $(document).ready(function () {
             });
 
             $.ajax({
-                url: "https://api.the-odds-api.com/v3/odds/?apiKey=9affd49948bc48e9c0515a0456515a2f&sport=americanfootball_nfl&region=uk&mkt=h2h",
+
+                url: "https://api.the-odds-api.com/v3/odds/?apiKey=a2fcf2e355a2d98481fc8e5cf46d6a39&sport=americanfootball_nfl&region=uk&mkt=h2h",
+
                 method: "GET"
             }).then(function (oddsResponse) {
                 console.log(oddsResponse)

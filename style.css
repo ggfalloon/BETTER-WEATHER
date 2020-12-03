@@ -1,22 +1,8 @@
 body {
     background-image: url(https://wallpaperaccess.com/full/733839.jpg);
 }
-
-/* #searchInput {
-    font-family: 'Chakra Petch', sans-serif;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    max-width: 500px;
-    border-radius: 15px;
-    margin-top: 10px;
-} */
-
-/* #searchBtn {
-    background-color: skyblue;
-    border-radius: 5px;
-    border: 2px solid black;
-} */
-
+#searchBtn {
+    background-color: black;
 #header {
     text-align: center;
     padding: 20px;
@@ -24,26 +10,44 @@ body {
     border-radius: 35px;
     background-image: url(https://www.seekpng.com/png/small/52-527367_stick-man-clipart-black-and-white-olympic-sports.png);
 }
-
-/* #header2 {
-    max-width: 700px;
-    margin: auto;
-    border-radius: 35px;
+ #header2 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;;
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
     font-family: 'Chakra Petch', sans-serif;
-} */
-
+    background-image: url(Assests/football_banner.jpg);
+    background-size: cover;
+} 
 .columnData {
-    text-align: centerß;
+    text-align: center;
     margin-top: 20px;
     min-width: 500px;
     min-height: 500px;
     max-height: 750px;
     font-family: 'Chakra Petch', sans-serif;
 }
-
-#weather, #wikipage, #game {
-    align-items: center;
-    padding: 2em;
+.relative{
+    justify-content: center;
+}
+#weatherCss {
+    padding: 20px;
+    margin-top: 20px;
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 750px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#stadiumCss {
+    padding: 20px;
+    margin-top: 20px;
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 750px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#oddsCss {
+    padding: 20px;
     margin-top: 20px;
     min-width: 500px;
     min-height: 500px;
@@ -53,9 +57,9 @@ body {
 
 
 #title {
-    /* text-align: center; */
+    text-align: center; 
     background-color: black;
-    max-width: 250px;
+    max-width: 500px;
     margin: 0 auto;
     color: white;
     border-radius: 15px;

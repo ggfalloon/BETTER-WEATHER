@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>LIVE-ODDS</title>
+    <title>BETTER-WEATHER</title>
 </head>
 
 <body>
+    <!--Header-->
     <div class="lg:flex lg:items-center lg:justify-between" id="header">
         <div class="flex-1 min-w-0">
             <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate" id="title">
-                LIVE-ODDS
-            </h2>
+
+                BETTER-WEATHER
+            </h2> 
         </div>
     </div>
-
     <div class="py-12 bg-white" id="header2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h1 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">LIVE-ODDS</h1>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    UPCOMING GAMES
+                    UPCOMING HOME GAMES
                 </p>
                 <div id="data"></div>
                 <span class="relative inset-y-0 left-0 flex items-center pl-2">
@@ -44,68 +44,20 @@
             </div>
         </div>
     </div>
-
+    <!--Weather Content-->
     <div class="grid grid-cols-3 gap-4 ">
-        <div class="bg-white shadow sm:rounded-lg columnData">
-
-            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
-                WEATHER INFO
-            </p>
-            <div class="border-t border-gray-200 items-center overflow-y-auto" id="weather">
-
-                <dl>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Date
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherDate">
-
-                        </dd>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Temp
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherTemp">
-
-                        </dd>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Humidity
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherHumidity">
-
-                        </dd>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Wind-speed
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherWindspeed">
-
-                        </dd>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Visibility
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherVisibility">
-
-                        </dd>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt class="text-sm font-medium text-gray-500">
-                            Precipitation
-                        </dt>
-                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="weatherPrecipitation">
-                        </dd>
-                    </div>
-                </dl>
+        <div id="weatherCss">
+            <div class="bg-white shadow sm:rounded-lg columnData overflow-y-auto">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+                    WEATHER INFO
+                </p>
+                <h1>City: <span id="weatherCity"></span></h1>
+                <div class="border-t border-gray-200 items-center" id="weather"> 
+                </div>
             </div>
         </div>
-
-        <div class="grid grid-cols-3 gap-4 ">
+        <!--Stadium Content-->
+        <div id="stadiumCss">
             <div class="bg-white shadow overflow-auto sm:rounded-lg columnData">
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
                     STADIUM INFO
@@ -164,23 +116,12 @@
 
                             </dd>
                         </div>
-
-                        <!-- <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500 text-right">
-                                
-                            </dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="imageEl">
-
-                            </dd>
-                        </div> -->
-
                     </dl>
                 </div>
             </div>
         </div>
-
-
-        <div class="grid grid-cols-3 gap-4">
+        <!--Odds Content-->
+        <div id="oddsCss">
             <div class="bg-white shadow overflow-hidden sm:rounded-lg columnData">
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
                     ODDS INFO
@@ -219,23 +160,10 @@
                             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="websites">
                             </dd>
                         </div>
-
-                        <!-- <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-
-
-            <dt class="text-sm font-medium text-gray-500">
-              Playing Teams :
-            </dt>
-            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" id="data">
-
-            </dd>
-
-          </div> -->
                     </dl>
                 </div>
             </div>
         </div>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="script.js"></script>
