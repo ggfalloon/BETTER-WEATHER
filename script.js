@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "https://api.the-odds-api.com/v3/odds/?apiKey=9affd49948bc48e9c0515a0456515a2f&sport=americanfootball_nfl&region=uk&mkt=h2h",
+        url: "https://api.the-odds-api.com/v3/odds/?apiKey=a2fcf2e355a2d98481fc8e5cf46d6a39&sport=americanfootball_nfl&region=uk&mkt=h2h",
         method: "GET"
     }).then(function (oddsResponse) {
         console.log(oddsResponse)
@@ -92,47 +92,46 @@ $(document).ready(function () {
                 });
             });
 
-            $.ajax({
-                url: "https://api.the-odds-api.com/v3/odds/?apiKey=9affd49948bc48e9c0515a0456515a2f&sport=americanfootball_nfl&region=uk&mkt=h2h",
-                method: "GET"
-            }).then(function (oddsResponse) {
-                console.log(oddsResponse)
+            // $.ajax({
+            //     url: "https://api.the-odds-api.com/v3/odds/?apiKey=9affd49948bc48e9c0515a0456515a2f&sport=americanfootball_nfl&region=uk&mkt=h2h",
+            //     method: "GET"
+            // }).then(function (oddsResponse) {
+            //     console.log(oddsResponse)
 
-                var dataArr = oddsResponse.data;
+            // var dataArr = oddsResponse.data;
 
-                for (i = 0; i < dataArr.length; i++) {
+            for (i = 0; i < dataArr.length; i++) {
 
-                    if (cityName == dataArr[i].home_team.split(" ")[0]) {
+                if (cityName == dataArr[i].home_team.split(" ")[0]) {
 
-                        var time = dataArr[i].commence_time;
-                        var myDate = new Date(time * 1000);
+                    var time = dataArr[i].commence_time;
+                    var myDate = new Date(time * 1000);
 
-                        $("#gametime").html(myDate.toLocaleString());
+                    $("#gametime").html(myDate.toLocaleString());
 
 
-                        var teamsPlaying = dataArr[i].teams;
-                        $("#gameteams").html(teamsPlaying[0] + " -VS- " + teamsPlaying[1]);
+                    var teamsPlaying = dataArr[i].teams;
+                    $("#gameteams").html(teamsPlaying[0] + " -VS- " + teamsPlaying[1]);
 
-                        var homeTeam = dataArr[i].home_team;
-                        $("#hometeam").html(homeTeam);
+                    var homeTeam = dataArr[i].home_team;
+                    $("#hometeam").html(homeTeam);
 
-                        var sites = dataArr[i].sites.slice(0, 5);
-                        var odd;
-                        for (i = 0; i < sites.length; i++) {
+                    var sites = dataArr[i].sites.slice(0, 5);
+                    var odd;
+                    for (i = 0; i < sites.length; i++) {
 
-                            var odd = sites[i].odds.h2h[0] + " / " + sites[i].odds.h2h[1];
-
-                            $("#websites").append(sites[i].site_nice + " : " + odd + "<br>");
-
-                        }
+                        var odd = sites[i].odds.h2h[0] + " / " + sites[i].odds.h2h[1];
+                        $("#websites").append(sites[i].site_nice + " : " + odd + "<br>");
 
                     }
+
                 }
+            }
 
-            }); $("#websites").html(" ");
-
-        });
+        }); $("#websites").html(" ");
 
     });
 
 });
+
+// });
