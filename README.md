@@ -1,6 +1,6 @@
 # BETTER-WEATHER
 
-Informed NFL betters know that weather conditions and stadium environment can affect the outcome of the game, look no further than BETTER WEATHER. Why waste time searching different websites before you place your wager? You'll find all the information you need to you can win big!
+Informed NFL betters know that weather conditions and stadium environment can affect the outcome of the game, look no further than BETTER WEATHER. Why waste time searching different websites before you place your wager? You'll find all the information you need right here so you can win big!
 
 ## Usage
 
