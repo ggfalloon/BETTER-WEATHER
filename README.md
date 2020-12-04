@@ -8,7 +8,7 @@ URL- https://ggfalloon.github.io/BETTER-WEATHER/
 
 Simply review the list of upcoming home games and type in the home team city, then click the search icon. Three different API calls are made to pull in the 5 day weather forecast, the stadium details as well as the game time and odds data from five different sites. You can clear your search by clicking the "x" in the search bar and search for another game. Enjoy and good luck! 
 
-![Screen Shot 2020-12-02 at 11 33 53 AM](https://user-images.githubusercontent.com/71281652/101081610-e4ba7900-356f-11eb-8801-ced1e7c70ed0.png)
+![BETTER-WEATHER-2020](https://user-images.githubusercontent.com/71281652/101115915-c1acbb00-35a9-11eb-8376-432a6922fd8f.png)
 
 ## Credits
 
