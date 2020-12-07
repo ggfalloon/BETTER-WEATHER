@@ -16,6 +16,8 @@ This web application was built in collaboration with:
 * Harrison Noblett - https://github.com/HarrisonNoblett
 * Moussa Nait Merabet - https://github.com/Mnm1506
 
+PlayUSA - "NFL Betting and Weather" https://www.playusa.com/sports-betting/nfl/weather-factors/
+
 ## Resources
 
 * openweathermapAPI.org
