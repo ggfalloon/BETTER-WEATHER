@@ -1,6 +1,6 @@
 # BETTER-WEATHER
 
-Informed NFL betters know that weather conditions and stadium environment can affect the outcome of the game, look no further than BETTER WEATHER. Why waste time searching different websites before you place your wager? You'll find all the information you need right here so you can win big!
+Informed NFL betters know that weather conditions and stadium environment can affect the outcome of the game, in comes this sleek new app - BETTER WEATHER. Why waste time searching different websites before you place your wager? You'll find all the information you need right here so you can win big!
 
 ## Usage
 
@@ -15,6 +15,8 @@ Simply review the list of upcoming home games and type in the home team city, th
 This web application was built in collaboration with:
 * Harrison Noblett - https://github.com/HarrisonNoblett
 * Moussa Nait Merabet - https://github.com/Mnm1506
+
+PlayUSA - "NFL Betting and Weather" https://www.playusa.com/sports-betting/nfl/weather-factors/
 
 ## Resources
 
