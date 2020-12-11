@@ -12,12 +12,12 @@ $(document).ready(function () {
         for (i = 0; i < dataArr.length; i++) {
 
             var team = dataArr[i].home_team;
-            $("#data").append(`<button id="team">${team}</button></br>`);
+            $("#data").append(`<button class="team">${team}</button></br>`);
         }
 
 
         // Added click function for button
-        $("#team").click(function (e) {
+        $(".team").on('click', function (e) {
 
             var teamName = e.target.textContent;
 
