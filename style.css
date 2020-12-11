@@ -12,11 +12,6 @@ body {
     font-size: 1.5em;
 }
 
-#searchBtn {
-   background-color: rgb(27, 26, 26) ;
-    border: 2px solid black;
-}
-
 #header {
     text-align: center;
     padding: 20px;
@@ -34,6 +29,12 @@ font-family: 'Chakra Petch', sans-serif;
 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
+#team {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border: 1.5px solid white;
+    width: 300px
+    
+}
 
 .columnData {
     text-align: center;
@@ -42,6 +43,10 @@ text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     min-height: 500px;
     max-height: 750px;
     font-family: 'Chakra Petch', sans-serif;
+}
+
+img {
+    display: inline;
 }
 
 #weatherCss {
