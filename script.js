@@ -7,11 +7,11 @@ $(document).ready(function () {
     }).then(function (oddsResponse) {
 
         // Pulls all upcoming home teams and displays them as a button
-        var dataArr = oddsResponse.data;
+        var dataArr = oddsResponse.data.slice(0, 10);
 
         for (i = 0; i < dataArr.length; i++) {
 
-            var team = dataArr[i].home_team.slice(0, 10);
+            var team = dataArr[i].home_team;
             $("#data").append(`<button class="team">${team}</button></br>`);
         }
 
