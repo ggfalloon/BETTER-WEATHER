@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         for (i = 0; i < dataArr.length; i++) {
 
-            var team = dataArr[i].home_team;
+            var team = dataArr[i].home_team.slice(0, 10);
             $("#data").append(`<button class="team">${team}</button></br>`);
         }
 
