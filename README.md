@@ -25,3 +25,7 @@ PlayUSA - "NFL Betting and Weather" https://www.playusa.com/sports-betting/nfl/w
 * wikipediaAPI.org
 * TailwindCSS.com
 * W3schools.com
+
+## License
+
+TBD &copy; Gabriele Falloon

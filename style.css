@@ -21,17 +21,18 @@ body {
 }
 
 #header2 {
-color: white;
-margin-top: 20px;
-background-image: url(Assets/footballbanner.jpg);
-background-size: cover;
-font-family: 'Chakra Petch', sans-serif;
-text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    color: white;
+    margin-top: 20px;
+    background-image: url(Assets/footballbanner.jpg);
+    background-size: cover;
+    font-family: 'Chakra Petch', sans-serif;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 #team {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     border: 1.5px solid white;
+    margin: .2rem;
     width: 300px
     
 }
