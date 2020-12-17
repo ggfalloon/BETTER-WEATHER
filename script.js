@@ -124,7 +124,7 @@ $(document).ready(function () {
                     }
                 });
             });
-        });
+        }); $("#websites").html(" ");
     });
 });
 
