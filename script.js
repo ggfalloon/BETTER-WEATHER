@@ -20,6 +20,7 @@ $(document).ready(function () {
         $(".team").on('click', function (e) {
 
             var teamName = e.target.textContent;
+            $("#websites").html(" ");
 
             for (i = 0; i < dataArr.length; i++) {
 
@@ -124,7 +125,11 @@ $(document).ready(function () {
                     }
                 });
             });
-        }); $("#websites").html(" ");
+
+        });
+
+
+
     });
 });
 
