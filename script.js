@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // Ajax call to get data from the odds api
     $.ajax({
-        url: "https://api.the-odds-api.com/v3/odds/?apiKey=0d039577f178b02a3ea70051b5b0b6bb&sport=americanfootball_nfl&region=uk&mkt=h2h",
+        url: "https://api.the-odds-api.com/v3/odds/?apiKey=6873dd7cd9bf96d15a56e732a7b0d3cf&sport=americanfootball_nfl&region=us&mkt=h2h",
         method: "GET"
     }).then(function (oddsResponse) {
 

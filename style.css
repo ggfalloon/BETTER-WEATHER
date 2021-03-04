@@ -17,7 +17,7 @@ body {
     padding: 20px;
     font-family: 'Chakra Petch', sans-serif;
     border-radius: 35px;
-    background-image: url(https://www.seekpng.com/png/small/52-527367_stick-man-clipart-black-and-white-olympic-sports.png);
+
 }
 
 #header2 {
@@ -25,7 +25,12 @@ body {
     margin-top: 20px;
     background-image: url(Assets/footballbanner.jpg);
     background-size: cover;
+    height: 20em;
     font-family: 'Chakra Petch', sans-serif;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+#notice {
+    font-family: 'Bungee', sans-serif;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
