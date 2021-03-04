@@ -2,6 +2,13 @@
 
 Informed NFL betters know that weather conditions and stadium environment can affect the outcome of the game, in comes this sleek new app - BETTER WEATHER. Why waste time searching different websites before you place your wager? You'll find all the information you need right here so you can win big!
 
+## Technologies
+
+* AJAX API's
+* JavaScript
+* Tailwind CSS
+* HTML
+
 ## Usage
 
 URL- https://ggfalloon.github.io/BETTER-WEATHER/
